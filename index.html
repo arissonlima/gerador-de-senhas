@@ -18,10 +18,12 @@
       max="64"
     />
 
-    <button>Copiar senha</button>
+    <button id="copy">Copiar senha</button>
 
     <script>
+      const inputEl = document.querySelector("#password");
       let passwordLength = 16;
+
       function generatePassword() {
         const chars =
           "abcdefghjklmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ123456789?!@&*()[]";
@@ -33,8 +35,11 @@
           password += chars.substring(randomNumber, randomNumber + 1);
         }
 
-        const inputEl = document.querySelector("#password");
         inputEl.value = password;
+      }
+
+      function copy() {
+        navigator.clipboard.writeText(inputEl.value);
       }
 
       const passwordLengthEl = document.querySelector("#password-length");
@@ -43,6 +48,9 @@
 
         generatePassword();
       });
+
+      const copyButtonEl = document.querySelector("#copy");
+      copyButtonEl.addEventListener("click", copy);
 
       generatePassword();
     </script>
