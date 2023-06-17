@@ -3,24 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Gerador de Senhas</title>
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1>Gerador de senha</h1>
-    <p>Utilize o nosso gerador online para criar uma senha forte e segura.</p>
-    <input type="text" name="password" id="password" />
-    <input
-      type="range"
-      name="password-length"
-      id="password-length"
-      value="16"
-      min="4"
-      max="64"
-    />
+    <main>
+      <section class="hero">
+        <h1 class="title">Gerador de senha</h1>
+        <p class="subtitle">
+          Utilize o nosso gerador online para criar uma senha forte e segura.
+        </p>
+      </section>
 
-    <button id="copy">Copiar senha</button>
+      <input type="text" name="password" id="password" />
+      <input
+        type="range"
+        name="password-length"
+        id="password-length"
+        value="16"
+        min="4"
+        max="64"
+      />
+
+      <button id="copy">Copiar senha</button>
+    </main>
 
     <script>
       const inputEl = document.querySelector("#password");
