@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <title>Gerador de Senhas</title>
@@ -22,7 +22,18 @@
         </p>
       </section>
 
-      <input type="text" name="password" id="password" />
+      <section class="box">
+        <div class="password">
+          <div class="text">
+            <input type="text" name="password" id="password" />
+          </div>
+          <div class="actions">
+            <button id="copy2">C</button>
+            <button id="renew">R</button>
+          </div>
+        </div>
+      </section>
+
       <input
         type="range"
         name="password-length"
