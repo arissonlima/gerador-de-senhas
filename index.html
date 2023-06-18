@@ -94,14 +94,14 @@
       let passwordLength = 16;
 
       function generatePassword() {
-        const chars = "abcdefghjklmnpqrstuvwxyz";
+        let chars = "abcdefghjklmnpqrstuvwxyz";
 
-        const uppercaseChars = "ABCDEFGHJKLMNPQRSTUVWXYZ";
+        const upperCaseChars = "ABCDEFGHJKLMNPQRSTUVWXYZ";
         const numberChars = "123456789";
         const symbolChars = "?!@&*()[]";
 
         if (upperCaseCheckEl.checked) {
-          chars += uppercaseChars;
+          chars += upperCaseChars;
         }
 
         if (numberCheckEl.checked) {
@@ -129,6 +129,8 @@
       const passwordLengthEl = document.querySelector("#password-length");
       passwordLengthEl.addEventListener("input", function () {
         passwordLength = passwordLengthEl.value;
+        document.querySelector("#password-length-text").innerText =
+          passwordLength;
 
         generatePassword();
       });
