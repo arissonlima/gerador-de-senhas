@@ -58,6 +58,18 @@ main{
   user-select: none;
 }
 
+.password .text input.font-sm{
+  font-size: 2rem;
+}
+
+.password .text input.font-xs{
+  font-size: 1.5rem;
+}
+
+.password .text input.font-xxs{
+  font-size: 1rem;
+}
+
 .password .actions button{
   background-color: transparent;
   border: none;
@@ -227,4 +239,30 @@ main{
 
 .submit button:hover{
   background: #9b51e0;
+}
+
+@media only screen and (max-width: 480px){
+  .password{
+    padding: 1rem;
+  }
+
+  .password .text input{
+    font-size: 1.5rem;
+  }
+
+  .password .text input.font-sm{
+    font-size: 1.2rem;
+  }
+
+  .password .text input.font-xs{
+    font-size: 1rem;
+  }
+
+  .password .text input.font-xxs{
+    font-size: 1rem;
+  }
+
+  .password .actions img{
+    width: 24px;
+  }
 }
